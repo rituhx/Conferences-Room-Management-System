@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Room Services</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="company-logo">
+            <div class="logo-container">
+                <img src="orientbell-tiles-logo.png" alt="Orient Bell Tiles Logo" class="logo-img">
+                <span class="company-name">Orient Bell Tiles</span>
+            </div>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <!-- <a href="#rooms">Conference Rooms</a> -->
+                    <a href="facilities.html">Facilities</a>
+                    <a href="services.html" class="active">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <button class="get-started-btn nav-btn" onclick="showBookingForm()">Book Now</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-section">
+        <div class="services-container">
+            <h2>Conference Room Services</h2>
+            
+            <div class="services-grid">
+                <!-- Booking Services -->
+                <div class="service-card featured">
+                    <div class="service-tag">Popular</div>
+                    <div class="service-icon">📅</div>
+                    <h3>Room Booking Service</h3>
+                    <p class="service-price">Starting at ₹2000/hour</p>
+                    <ul>
+                        <li>Online Booking System</li>
+                        <li>Flexible Time Slots</li>
+                        <li>Instant Confirmation</li>
+                        <li>Multiple Payment Options</li>
+                        <li>Easy Cancellation</li>
+                    </ul>
+                    <button class="service-btn">Book Now</button>
+                </div>
+
+                <!-- Technical Support -->
+                <div class="service-card">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Technical Support</h3>
+                    <p class="service-price">Included with Booking</p>
+                    <ul>
+                        <li>AV Equipment Setup</li>
+                        <li>Video Conferencing</li>
+                        <li>Wi-Fi Support</li>
+                        <li>Equipment Training</li>
+                        <li>On-call Assistance</li>
+                    </ul>
+                    <button class="service-btn">Get Support</button>
+                </div>
+
+                <!-- Catering Services -->
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Catering Services</h3>
+                    <p class="service-price">From ₹500/person</p>
+                    <ul>
+                        <li>Breakfast & Lunch Options</li>
+                        <li>Coffee & Tea Service</li>
+                        <li>Snack Packages</li>
+                        <li>Special Diet Options</li>
+                        <li>Professional Service</li>
+                    </ul>
+                    <button class="service-btn">View Menu</button>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <!-- Event Support -->
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Event Support</h3>
+                    <p class="service-price">Custom Quotes</p>
+                    <ul>
+                        <li>Event Planning</li>
+                        <li>Registration Desk</li>
+                        <li>Name Badges</li>
+                        <li>Event Materials</li>
+                        <li>Support Staff</li>
+                    </ul>
+                    <button class="service-btn">Request Quote</button>
+                </div>
+
+                <!-- Recording Services -->
+                <div class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3>Recording Services</h3>
+                    <p class="service-price">From ₹3000/session</p>
+                    <ul>
+                        <li>HD Video Recording</li>
+                        <li>Audio Recording</li>
+                        <li>Live Streaming</li>
+                        <li>Post-Production</li>
+                        <li>Digital Delivery</li>
+                    </ul>
+                    <button class="service-btn">Book Recording</button>
+                </div>
+
+                <!-- Business Services -->
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Business Services</h3>
+                    <p class="service-price">Pay Per Use</p>
+                    <ul>
+                        <li>Printing & Copying</li>
+                        <li>Document Scanning</li>
+                        <li>Office Supplies</li>
+                        <li>Secretarial Support</li>
+                        <li>Translation Services</li>
+                    </ul>
+                    <button class="service-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Information -->
+    <section class="service-features">
+        <div class="services-container">
+            <h2>Why Choose Our Services</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Quick Booking</h4>
+                    <p>Easy online booking system with instant confirmation</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💪</div>
+                    <h4>Professional Support</h4>
+                    <p>Dedicated team to assist with all your needs</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌟</div>
+                    <h4>Premium Facilities</h4>
+                    <p>State-of-the-art equipment and amenities</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h4>Competitive Pricing</h4>
+                    <p>Best value for your business meetings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>&copy; 2024 Team_InnoVisionaries. All Rights Reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Use</a>
+                    <span class="separator">|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

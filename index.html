@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Conference Room Booking System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="company-logo">
+            <div class="logo-container">
+                <img src="orientbell-tiles-logo.png" alt="Orient Bell Tiles Logo" class="logo-img">
+                <span class="company-name" style="color: red;">Orient Bell Tiles</span>
+            </div>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <!-- <div class="logo">Conference Center</div> -->
+                <div class="nav-links">
+                    <!-- <a href="#rooms">Conference Rooms</a> -->
+                    <a href="facilities.html" style="background-color: lightgreen">Facilities</a>
+                    <a href="services.html" style="background-color: lightgreen">Services</a>
+                    <a href="contact.html" style="background-color: lightgreen">Contact</a>
+                    <button class="get-started-btn nav-btn" onclick="showBookingForm()">Book Now</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="experience-overlay">
+            <h2>Experience</h2>
+            <div class="now-text">
+                NOW
+                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-form" id="bookingForm" style="display: none;">
+        <div class="booking-container">
+            <h2 class="section-title">Select a Conference Room</h2>
+            <div class="room-container">
+                <!-- Room 1 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407" alt="Small Meeting Room">
+                    <div class="room-direction">North Wing</div>
+                    <div class="room-info">
+                        <h3>Small Meeting Room</h3>
+                        <p class="price">$50/hour</p>
+                        <ul>
+                            <li>Capacity: 4-6 people</li>
+                            <li>HD Display Screen</li>
+                            <li>Video Conference Setup</li>
+                            <li>Whiteboard</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('small', 50, 'North Wing')">Select Room</button>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Medium Conference Room">
+                    <div class="room-direction">South Wing</div>
+                    <div class="room-info">
+                        <h3>Medium Conference Room</h3>
+                        <p class="price">$100/hour</p>
+                        <ul>
+                            <li>Capacity: 10-12 people</li>
+                            <li>Projector System</li>
+                            <li>Audio Conference</li>
+                            <li>Refreshment Area</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('medium', 100, 'South Wing')">Select Room</button>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4" alt="Large Conference Room">
+                    <div class="room-direction">East Wing</div>
+                    <div class="room-info">
+                        <h3>Large Conference Room</h3>
+                        <p class="price">$200/hour</p>
+                        <ul>
+                            <li>Capacity: 20-25 people</li>
+                            <li>Dual Projector Setup</li>
+                            <li>Premium Sound System</li>
+                            <li>Catering Available</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('large', 200, 'East Wing')">Select Room</button>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40" alt="Executive Boardroom">
+                    <div class="room-direction">West Wing</div>
+                    <div class="room-info">
+                        <h3>Executive Boardroom</h3>
+                        <p class="price">$300/hour</p>
+                        <ul>
+                            <li>Capacity: 15-18 people</li>
+                            <li>Interactive Smart Board</li>
+                            <li>Premium Video Conferencing</li>
+                            <li>Executive Catering</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('boardroom', 300, 'West Wing')">Select Room</button>
+                    </div>
+                </div>
+
+                <!-- Room 5 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1577412647305-991150c7d163" alt="Training Room">
+                    <div class="room-direction">North Wing</div>
+                    <div class="room-info">
+                        <h3>Training Room</h3>
+                        <p class="price">$150/hour</p>
+                        <ul>
+                            <li>Capacity: 30-35 people</li>
+                            <li>Classroom Style Setup</li>
+                            <li>Multiple Whiteboards</li>
+                            <li>Individual Power Outlets</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('training', 150, 'North Wing')">Select Room</button>
+                    </div>
+                </div>
+
+                <!-- Room 6 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678" alt="Innovation Lab">
+                    <div class="room-direction">South Wing</div>
+                    <div class="room-info">
+                        <h3>Innovation Lab</h3>
+                        <p class="price">$180/hour</p>
+                        <ul>
+                            <li>Capacity: 15-20 people</li>
+                            <li>Digital Collaboration Tools</li>
+                            <li>3D Presentation Setup</li>
+                            <li>Flexible Furniture</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('innovation', 180, 'South Wing')">Select Room</button>
+                    </div>
+                </div>
+
+                <!-- Room 7 -->
+                <div class="room-box">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678" alt="Auditorium">
+                    <div class="room-direction">East Wing</div>
+                    <div class="room-info">
+                        <h3>Auditorium</h3>
+                        <p class="price">$400/hour</p>
+                        <ul>
+                            <li>Capacity: 100+ people</li>
+                            <li>Theater Style Seating</li>
+                            <li>Professional Stage</li>
+                            <li>Advanced AV System</li>
+                        </ul>
+                        <button class="room-btn" onclick="showRoomForm('auditorium', 400, 'East Wing')">Select Room</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room Booking Form -->
+            <div id="roomBookingForm" style="display: none;">
+                <button class="back-btn" onclick="showRoomSelection()">← Back to Rooms</button>
+                <form class="room-booking-form" onsubmit="saveBookingToCSV(event)">
+                    <h3>Book <span id="selectedRoomName">Room</span></h3>
+                    <div class="selected-room-info">
+                        <p>Location: <span id="selectedLocation">-</span></p>
+                        <p>Rate: $<span id="selectedRate">0</span>/hour</p>
+                    </div>
+
+                    <!-- Booking Contact Information -->
+                    <div class="form-section">
+                        <h4>Contact Information</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booker-name">Full Name*</label>
+                                <input type="text" id="booker-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booker-email">Email Address*</label>
+                                <input type="email" id="booker-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booker-phone">Phone Number*</label>
+                                <input type="tel" id="booker-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Details -->
+                    <div class="form-section">
+                        <h4>Booking Details</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                                <label for="booking-date">Date*</label>
+                            <input type="date" id="booking-date" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="start-time">Start Time*</label>
+                            <input type="time" id="start-time" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="duration">Duration*</label>
+                            <select id="duration" onchange="updateTotalPrice()" required>
+                                <option value="1">1 Hour</option>
+                                <option value="2">2 Hours</option>
+                                <option value="4">Half Day (4 Hours)</option>
+                                <option value="8">Full Day (8 Hours)</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="attendees">Number of Attendees*</label>
+                                <input type="number" id="attendees" min="1" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Services -->
+                    <div class="form-section">
+                        <h4>Additional Services</h4>
+                        <div class="form-row">
+                            <div class="form-group checkbox-group">
+                                <label><input type="checkbox" name="services" value="catering"> Catering Service</label>
+                                <label><input type="checkbox" name="services" value="equipment"> AV Equipment</label>
+                                <label><input type="checkbox" name="services" value="recording"> Recording Service</label>
+                                <label><input type="checkbox" name="services" value="tech-support"> Technical Support</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Requirements -->
+                    <div class="form-section">
+                        <h4>Special Requirements</h4>
+                        <div class="form-group">
+                            <label for="special-requests">Additional Notes or Requirements</label>
+                            <textarea id="special-requests" rows="3" placeholder="Enter any special requirements or setup instructions"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="booking-summary">
+                        <h4>Booking Summary</h4>
+                        <p>Room Rate: $<span id="selectedRate">0</span>/hour</p>
+                        <p>Duration: <span id="durationSummary">1</span> hour(s)</p>
+                        <p>Total Price: $<span id="totalPrice">0</span></p>
+                    </div>
+
+                    <div class="form-section terms">
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" required>
+                                I agree to the <a href="#">Terms and Conditions</a>*
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="confirm-btn">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay" onclick="hideBookingForm()"></div>
+
+
+    <!-- <div class="form-group">
+        <label for="booker-name">Full Name*</label>
+        <input type="text" id="booker-name" required>
+    </div> -->
+    
+
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>&copy; 2024 Team_InnoVisionaries. All Rights Reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Use</a>
+                    <span class="separator">|</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Orient Bell Tiles</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="company-logo">
+            <div class="logo-container">
+                <img src="orientbell-tiles-logo.png" alt="Orient Bell Tiles Logo" class="logo-img">
+                <span class="company-name">Orient Bell Tiles</span>
+            </div>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <!-- <a href="#rooms">Conference Rooms</a> -->
+                    <a href="facilities.html">Facilities</a>
+                    <a href="services.html">Services</a>
+                    <button class="get-started-btn nav-btn" onclick="showBookingForm()">Book Now</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <!-- Corporate Office -->
+                <div class="contact-card">
+                    <h3>Corporate Office</h3>
+                    <p>Kalasalingam University</p>
+                    <p>Kunal Raj</p>
+                    <p>📞 +91 8084239123</p>
+                    <p>✉️ rajkunal348@gmail.com</p>
+                </div>
+
+                <!-- Sales Team -->
+                <div class="contact-card">
+                    <h3>Sales Team</h3>
+                    <p><strong>Uttam Kumar</strong></p>
+                    
+                    <p>📞 +91 8936012715</p>
+                    <p>✉️ uttamstm15122005@gmail.com</p>
+                </div>
+
+                <!-- Customer Support -->
+                <div class="contact-card">
+                    <h3>Customer Support</h3>
+                    <p><strong>Queen Bipin</strong></p>
+                    <p>Support Manager</p>
+                    <p>📞 +91 9142773581</p>
+                    <p>✉️ uttamstm15122005@gmail.com</p>
+                </div>
+
+                <!-- Technical Support -->
+                <div class="contact-card">
+                    <h3>Technical Support</h3>
+                    <p><strong>Ganesh Kumar Sardar</strong></p>
+                    <p>Technical Head</p>
+                    <p>📞 +91 9155543033</p>
+                    <p>✉️ ganeshsardar2004@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Feedback Section -->
+            <section class="feedback-section">
+                <div class="container">
+                    <h2>Customer Feedback</h2>
+                    <div class="feedback-container">
+                        <!-- Feedback Form -->
+                        <div class="feedback-form-container">
+                            <h3>Share Your Experience</h3>
+                            <form id="feedbackForm" onsubmit="submitFeedback(event)">
+                                <div class="form-group">
+                                    <label for="name">Full Name*</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating">Rating*</label>
+                                    <div class="star-rating">
+                                        <input type="radio" id="star5" name="rating" value="5" required>
+                                        <label for="star5">★</label>
+                                        <input type="radio" id="star4" name="rating" value="4">
+                                        <label for="star4">★</label>
+                                        <input type="radio" id="star3" name="rating" value="3">
+                                        <label for="star3">★</label>
+                                        <input type="radio" id="star2" name="rating" value="2">
+                                        <label for="star2">★</label>
+                                        <input type="radio" id="star1" name="rating" value="1">
+                                        <label for="star1">★</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback">Your Feedback*</label>
+                                    <textarea id="feedback" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Submit Feedback</button>
+                            </form>
+                        </div>
+
+                        <!-- Feedback Display -->
+                        <div class="feedback-display">
+                            <h3>Recent Feedback</h3>
+                            <div id="feedbackList" class="feedback-list">
+                                <!-- Default feedback items -->
+                                <div class="feedback-item">
+                                    <div class="feedback-header">
+                                        <span class="feedback-name">Rajesh Kumar</span>
+                                        <span class="feedback-rating">★★★★★</span>
+                                    </div>
+                                    <p class="feedback-text">Excellent service and great quality tiles. The staff was very helpful in selecting the perfect tiles for my home.</p>
+                                    <div class="feedback-date">2024-01-15</div>
+                                </div>
+                                <div class="feedback-item">
+                                    <div class="feedback-header">
+                                        <span class="feedback-name">Priya Sharma</span>
+                                        <span class="feedback-rating">★★★★☆</span>
+                                    </div>
+                                    <p class="feedback-text">Very good collection of tiles. Professional installation team. Would recommend to others.</p>
+                                    <div class="feedback-date">2024-01-10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
